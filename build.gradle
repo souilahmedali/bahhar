@@ -8,6 +8,15 @@ manifest{
     attributes 'Start-Class': 'com.msouilah.navionics.NavionicsApplication'
 }
 
+jar {
+    manifest {
+        attributes(
+                'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
+                'Main-Class': 'com.msouilah.navionics.NavionicsApplication'
+        )
+    }
+}
+
 group = 'com.msouilah'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
