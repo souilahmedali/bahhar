@@ -4,6 +4,12 @@ plugins {
     id 'java'
 }
 
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
 manifest{
     attributes 'Start-Class': 'com.msouilah.navionics.NavionicsApplication'
 }
@@ -27,9 +33,4 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-devtools'
     implementation 'org.springframework.boot:spring-boot-maven-plugin'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-}
-
-tasks.named('test') {
-    useJUnitPlatform()
 }
