@@ -4,10 +4,8 @@ plugins {
     id 'java'
 }
 
-bootJar {
-    manifest {
-        attributes 'Start-Class': 'com.msouilah.navionics.NavionicsApplication'
-    }
+manifest{
+    attributes 'Start-Class': 'com.msouilah.navionics.NavionicsApplication'
 }
 
 group = 'com.msouilah'
