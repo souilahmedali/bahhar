@@ -26,7 +26,7 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-devtools'
-    implementation 'org.springframework.spring-boot-maven-plugin'
+    implementation 'org.springframework.boot:spring-boot-maven-plugin'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
