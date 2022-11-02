@@ -9,10 +9,18 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.Calendar;
 import java.util.Collections;
+import java.util.Date;
 import java.util.HashMap;
 
 @RestController
 public class TileController {
+
+
+    @GetMapping("/ping")
+    public String getPing(){
+        return new Date().toString();
+    }
+
 
     @GetMapping(value = "/navionics/tile/{z}/{x}/{y}", produces = MediaType.IMAGE_PNG_VALUE)
     @ResponseBody
