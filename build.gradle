@@ -4,22 +4,18 @@ plugins {
     id 'java'
 }
 
-configurations {
-    compileOnly {
-        extendsFrom annotationProcessor
+buildscript {
+    ext {
+        springBootVersion = '2.7.5.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
     }
 }
 
-manifest{
-    attributes 'Start-Class': 'com.msouilah.navionics.NavionicsApplication'
-}
-
-jar {
-    manifest {
-        attributes 'Main-Class': 'com.msouilah.navionics.NavionicsApplication'
-        attributes 'Start-Class': 'com.msouilah.navionics.NavionicsApplication'
-    }
-}
 
 group = 'com.msouilah'
 version = '0.0.1-SNAPSHOT'
@@ -32,5 +28,4 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-devtools'
-    implementation 'org.springframework.boot:spring-boot-maven-plugin'
 }
