@@ -4,10 +4,6 @@ plugins {
     id 'java'
 }
 
-springBoot {
-    mainClassName = 'com.msouilah.navionics.NavionicsApplication'
-}
-
 bootJar {
     mainClassName = 'com.msouilah.navionics.NavionicsApplication'
     manifest {
